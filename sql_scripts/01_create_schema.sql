@@ -9,6 +9,7 @@ first_name VARCHAR(60),
 last_name VARCHAR(60),
 email VARCHAR(100) UNIQUE,
 signup_data DATE
+
 );
 
 CREATE TABLE orders (
