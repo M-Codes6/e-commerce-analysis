@@ -18,6 +18,21 @@ The database consists of two core tables linked by a **One-to-Many relationship*
 2. **Orders:** Tracks transaction details, linked to the `customers` table via a `customer_id` **Foreign Key**.
 
 
+## 📊 Business Intelligence & Analysis
+In the third phase of this project, I implemented analytical queries to extract actionable insights from the relational data.
+
+### 1. Customer Lifetime Value (CLV)
+**Objective:** Identify high-value customers by calculating their total historical spend.
+* **Technique used:** `INNER JOIN` with `SUM()` aggregation and `GROUP BY` logic.
+* **Business Value:** Helps marketing teams identify which customers to target for loyalty programs.
+
+### 2. Transactional Volume
+**Objective:** Track how many orders each customer has placed.
+* **Technique used:** `COUNT()` aggregation and `ORDER BY` for ranking.
+* **Business Value:** Identifying active vs. at-risk (churning) customers.
+
+
+
 
 ## 🚀 Key Features Implemented
 * **Relational Mapping:** Established `Primary Key` and `Foreign Key` constraints to maintain strict data relationships.
