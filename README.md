@@ -45,4 +45,4 @@ In the third phase of this project, I implemented analytical queries to extract 
 - [ ] Connect the SQL backend to a **Python/Pandas** environment for deeper visualization.
 
 ---
-**Contact:** [Muzamil Mushtaq](https://www.linkedin.com/in/muzamilnaik/) | Computer Science Graduate
+**Contact:** [Muzamil Mushtaq](https://www.linkedin.com/in/muzamilnaik/) 
