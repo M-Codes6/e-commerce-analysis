@@ -11,6 +11,8 @@ This project focuses on building a professional-grade relational database from s
 ## 📂 Project Structure
 * `sql_scripts/01_create_schema.sql`: Contains the DDL (Data Definition Language) for creating the `ecommerce_db`, `customers`, and `orders` tables.
 * `sql_scripts/02_data_seeding.sql`: Contains the DML (Data Manipulation Language) for populating the database with realistic sample data.
+* `sql_scripts/03_business_insights.sql`: Analytical queries for revenue and retention tracking.
+
 
 ## 🏗️ Database Schema
 The database consists of two core tables linked by a **One-to-Many relationship**:
@@ -19,28 +21,34 @@ The database consists of two core tables linked by a **One-to-Many relationship*
 
 
 ## 📊 Business Intelligence & Analysis
-In the third phase of this project, I implemented analytical queries to extract actionable insights from the relational data.
+In this phase, I transitioned from data management to Actionable Insights, using advanced SQL joins to solve specific business problems.
 
-### 1. Customer Lifetime Value (CLV)
-**Objective:** Identify high-value customers by calculating their total historical spend.
-* **Technique used:** `INNER JOIN` with `SUM()` aggregation and `GROUP BY` logic.
-* **Business Value:** Helps marketing teams identify which customers to target for loyalty programs.
+### 1. Revenue Analysis (High-Value Customers)
+**Objective:** Identify `VIP` customers based on total historical spend.
+**Technique:** INNER JOIN combined with `SUM()` and `COUNT()` aggregations.
+**Insight:** By joining customers and orders, I generated a ranked list of top-tier spenders, allowing for targeted loyalty rewards.
 
-### 2. Transactional Volume
-**Objective:** Track how many orders each customer has placed.
-* **Technique used:** `COUNT()` aggregation and `ORDER BY` for ranking.
-* **Business Value:** Identifying active vs. at-risk (churning) customers.
 
+
+### 2. Retention Analysis (Inactive Users)
+**Objective:** Identify users who signed up but have not yet made a purchase.
+**Technique:** LEFT JOIN filtered by WHERE `o.order_id` IS `NULL`.
+**Insight:** Extracted the emails of `Ghost Customers.` This data is essential for marketing teams to trigger re-engagement campaigns or provide first-purchase incentives.
 
 
 
 ## 🚀 Key Features Implemented
-* **Relational Mapping:** Established `Primary Key` and `Foreign Key` constraints to maintain strict data relationships.
-* **Auto-Incrementing IDs:** Implemented for efficient record management.
-* **Data Seeding:** Populated the database with a mix of "Active" and "Inactive" users to prepare for advanced analytical queries (JOINs and Aggregations).
+
+* **Relational Mapping:** Established `Primary Key` and `Foreign Key ` constraints to maintain strict data relationships.
+
+* **Complex Joins:** Implemented both `INNER JOIN` and `LEFT JOIN` to analyze different segments of the customer base.
+
+* **Data Aggregation:** Utilized GROUP BY, `SUM()`, and `COUNT()` to transform raw transactional rows into business metrics.
+
+* **Data Seeding:** Populated the database with a mix of `Active` and `Inactive` users to test real-world analytical scenarios.
 
 ## 📈 Future Roadmap
-- [ ] Implement **Advanced JOINs** to identify top-spending customers.
+- [X] Implement **Advanced JOINs** to identify top-spending customers.
 - [ ] Apply **Window Functions** for monthly sales trend analysis.
 - [ ] Connect the SQL backend to a **Python/Pandas** environment for deeper visualization.
 
