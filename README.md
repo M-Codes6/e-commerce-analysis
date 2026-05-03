@@ -13,6 +13,8 @@ This project focuses on building a professional-grade relational database from s
 * `sql_scripts/02_data_seeding.sql`: Contains the DML (Data Manipulation Language) for populating the database with realistic sample data.
 * `sql_scripts/03_business_insights.sql`: Analytical queries for revenue and retention tracking.
 
+* `sql_scripts/04_database_views.sql`: This approach ensures DRY (Don't Repeat Yourself) principles, improves security, and provides a clean interface for data analysts.
+
 
 ## 🏗️ Database Schema
 The database consists of two core tables linked by a **One-to-Many relationship**:
@@ -28,12 +30,18 @@ In this phase, I transitioned from data management to Actionable Insights, using
 **Technique:** INNER JOIN combined with `SUM()` and `COUNT()` aggregations.
 **Insight:** By joining customers and orders, I generated a ranked list of top-tier spenders, allowing for targeted loyalty rewards.
 
-
-
 ### 2. Retention Analysis (Inactive Users)
 **Objective:** Identify users who signed up but have not yet made a purchase.
 **Technique:** LEFT JOIN filtered by WHERE `o.order_id` IS `NULL`.
 **Insight:** Extracted the emails of `Ghost Customers.` This data is essential for marketing teams to trigger re-engagement campaigns or provide first-purchase incentives.
+
+
+## 🖼️ Database Abstraction (SQL Views)
+To improve code reusability and simplify complex reporting, I implemented SQL Views. This layer acts as a "Virtual Table" that stores complex query logic without duplicating data.
+
+**view_customer_revenue_metrics:** A high-level dashboard that encapsulates `INNER JOIN`, `SUM`, `COUNT` and `GROUP BY` logic to show total customer spend at a glance.
+**view_inactive_customers:** A retention-focused tool using `LEFT JOIN ` to instantly identify customers who haven't placed orders.
+**Benefits:** This approach ensures `DRY (Don't Repeat Yourself)` principles, improves security, and provides a clean interface for data analysts.
 
 
 
