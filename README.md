@@ -45,6 +45,15 @@ To improve code reusability and simplify complex reporting, I implemented SQL Vi
 
 
 
+## 🎯 Advanced Logic: Subqueries
+To handle multi-step data retrieval, I implemented Subqueries (Nested Queries). This allows the database to perform dynamic calculations on the fly before returning the final result.
+
+**Scalar Subqueries:** Used to compare individual records against aggregate values `(e.g., finding customers who spent more than the average)`.
+**Multi-row Subqueries:** Used with the `IN` operator to filter data across related tables without complex join overhead.
+**Logic Nesting:** Demonstrated the ability to nest queries three layers deep to bridge the gap between `Max Values` and `Customer Profiles.`
+
+
+
 ## 🚀 Key Features Implemented
 
 * **Relational Mapping:** Established `Primary Key` and `Foreign Key ` constraints to maintain strict data relationships.
