@@ -14,6 +14,8 @@ This project focuses on building a professional-grade relational database from s
 * `sql_scripts/03_business_insights.sql`: Analytical queries for revenue and retention tracking.
 
 * `sql_scripts/04_database_views.sql`: This approach ensures DRY (Don't Repeat Yourself) principles, improves security, and provides a clean interface for data analysts.
+* `sql_scripts/05_advanced_queries`: I implemented Subqueries (Nested Queries). This allows the database to perform dynamic calculations on the fly before returning the final result.
+* `sql_scripts/06_ctes`: I moved from using Subqueries to CTEs. While subqueries are useful for quick calculations, they often lead to "Parenthesis Chaos" as the code grows, making it hard to read and debug.
 
 
 ## 🏗️ Database Schema
@@ -51,6 +53,25 @@ To handle multi-step data retrieval, I implemented Subqueries (Nested Queries). 
 **Scalar Subqueries:** Used to compare individual records against aggregate values `(e.g., finding customers who spent more than the average)`.
 **Multi-row Subqueries:** Used with the `IN` operator to filter data across related tables without complex join overhead.
 **Logic Nesting:** Demonstrated the ability to nest queries three layers deep to bridge the gap between `Max Values` and `Customer Profiles.`
+
+
+
+## 🪜 Logic Refactoring: Common Table Expressions (CTEs)
+I moved from using Subqueries to CTEs. While subqueries are useful for quick calculations, they often lead to "Parenthesis Chaos" as the code grows, making it hard to read and debug.
+
+*Why I switched to CTEs:*
+
+**The Ladder Structure:** Unlike nested subqueries `(which work from the inside out)`, `CTEs` follow a `top-to-bottom "ladder"` logic. This makes the code much more readable.
+**Sequential Steps:** I can define a temporary result set `(like a "Company Average")` in a `WITH` block and then use it immediately in my main query.
+**Easier Maintenance:** If the business logic changes `(e.g., changing how we define a "Loyal Customer")`, I only need to update the logic in one specific `step` of the ladder rather than digging through layers of nested code.
+
+*Key Learnings:*
+🔺Using the `WITH` clause to create temporary result sets.
+🔺Chaining multiple `CTEs` together to perform `"Double Aggregation" (e.g., finding the average of a count)`.
+🔺Using `CROSS JOIN` to apply a single benchmark value to every row in a table.
+
+
+
 
 
 
