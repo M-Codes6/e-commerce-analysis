@@ -10,7 +10,6 @@ FROM customers
 WHERE customer_id IN (SELECT customer_id FROM orders WHERE total_amount > 500);
 
 
-
 --- The subquery approach Double nested ---
 SELECT first_name, last_name
 FROM customers
@@ -19,13 +18,11 @@ WHERE customer_id =
 (SELECT MAX(total_amount) FROM orders ) );
 
 
-
 --- join with subquery ---
 SELECT c.first_name, c.last_name
 From customers c
 JOIN orders o ON c.customer_id = o.customer_id
 WHERE o.total_amount = (SELECT MAX(total_amount) FROM orders);
-
 
 
 --- Underperformer ---
@@ -37,7 +34,6 @@ WHERE customer_id IN (
      WHERE total_amount < (
      SELECT AVG(total_amount) FROM orders )
 );
-
 
 
 --- Recent Buyer ---
@@ -58,3 +54,9 @@ WHERE customer_id IN (
     FROM orders 
     WHERE total_amount > 800
 ); 
+
+
+
+
+
+
