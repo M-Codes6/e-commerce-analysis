@@ -1,4 +1,6 @@
 
+-- This file refactors the subqueries from day 05 into more readable CTEs.
+
 WITH avg_calculation AS (
 
     -- We calculate the single average value once here
@@ -13,10 +15,9 @@ WHERE o.total_amount < a.benchmark; -- Now we compare the order to the average
 
 
 
-
 WITH latest_date AS (
    
-    SELECT MAX(order_data) AS benchmark 
+    SELECT MAX(order_date) AS benchmark 
     FROM orders
 )
 
@@ -24,7 +25,7 @@ SELECT c.first_name, c.last_name, a.benchmark
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id 
 CROSS JOIN latest_date a 
-WHERE o.order_data = a.benchmark; 
+WHERE o.order_date = a.benchmark; 
 
 
 

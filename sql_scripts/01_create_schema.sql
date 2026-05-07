@@ -20,3 +20,14 @@ total_amount DECIMAL(10, 2),
 FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 
 );
+
+
+CREATE TABLE IF NOT EXISTS products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    category_id INT,
+    price DECIMAL(10, 2) NOT NULL
+);
+
+
+

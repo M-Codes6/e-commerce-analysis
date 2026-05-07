@@ -22,3 +22,4 @@ SELECT * FROM view_customer_revenue_metrics WHERE total_spent > 500;
 
 
 
+

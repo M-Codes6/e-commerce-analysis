@@ -1,4 +1,4 @@
-INSERT INTO customers (first_name, last_name, email, signup_data) VALUES
+INSERT INTO customers (first_name, last_name, email, signup_date) VALUES
 ('Muzamil', 'Naik', 'abc@example.com', '2026-01-15'),
 ('Arjun', 'Sharma', 'arjun.s@example.com', '2026-01-20'),
 ('Sarah', 'Khan', 'sarah.k@example.com', '2026-02-05'),
@@ -14,7 +14,7 @@ INSERT INTO customers (first_name, last_name, email, signup_data) VALUES
 ('Ishaan', 'sharma', 'ishaan@example.com', '2026-03-20');
 
 
-INSERT INTO orders (customer_id, order_data, total_amount) VALUES
+INSERT INTO orders (customer_id, order_date, total_amount) VALUES
 (1, '2026-01-16', 1500.00),
 (1, '2026-02-20', 2500.50),
 (2, '2026-01-22', 450.00),
@@ -32,3 +32,12 @@ INSERT INTO orders (customer_id, order_data, total_amount) VALUES
 (4, '2026-04-15', 125.00);
 
 
+INSERT INTO products (product_name, category_id, price) VALUES
+('Pro Laptop', 1, 1200.00),
+('Budget Laptop', 1, 600.00),
+('Gaming PC', 1, 2500.00),
+('Wireless Mouse', 2, 25.00),
+('Mechanical Keyboard', 2, 120.00),
+('Webcam 4K', 2, 150.00),
+('Smartphone X', 3, 999.00),
+('Smartphone SE', 3, 450.00);
