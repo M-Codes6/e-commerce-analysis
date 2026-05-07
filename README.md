@@ -73,6 +73,22 @@ I moved from using Subqueries to CTEs. While subqueries are useful for quick cal
 
 
 
+## 🔍 The Magnifying Glass: Window Functions
+I moved beyond "collapsing" data with GROUP BY and learned how to use Window Functions to perform complex calculations without losing individual row detail.
+
+*Key Insight:* Window Functions allow us to compare an individual row's value against a group (like a category average) without using a JOIN.
+
+**The `OVER()` Clause:** The backbone of the function. It defines the  `window` of data to look at.
+
+**PARTITION BY:** Similar to `GROUP BY`, but it keeps all rows visible while `restarting` the calculation for each group.
+
+**RANK():** Created dynamic leaderboards within categories.
+
+**SUM() OVER():** Built running totals to track revenue accumulation over time.
+
+
+
+
 
 
 ## 🚀 Key Features Implemented
