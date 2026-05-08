@@ -6,13 +6,11 @@ RANK() OVER(PARTITION BY category_id ORDER BY price DESC) AS price_rank
 FROM products;
 
 
-
 --- Running Total (Accumulation)
 
 SELECT order_id, order_date, total_amount,
 SUM(total_amount) OVER(ORDER BY order_date) AS running_total
 FROM orders;
-
 
 
 --- Average comparison

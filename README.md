@@ -3,10 +3,14 @@
 ## 📌 Project Overview
 This project focuses on building a professional-grade relational database from scratch to manage and analyze e-commerce data. Moving beyond flat CSV files, I engineered a custom schema in **MySQL** to simulate real-world data pipelines, ensuring data integrity through relational mapping.
 
+
+
 ## 🛠️ Tech Stack
 * **Database:** MySQL
 * **Editor:** VS Code & MySQL Workbench
 * **Version Control:** Git & GitHub
+
+
 
 ## 📂 Project Structure
 * `sql_scripts/01_create_schema.sql`: Contains the DDL (Data Definition Language) for creating the `ecommerce_db`, `customers`, and `orders` tables.
@@ -18,10 +22,14 @@ This project focuses on building a professional-grade relational database from s
 * `sql_scripts/06_ctes`: I moved from using Subqueries to CTEs. While subqueries are useful for quick calculations, they often lead to "Parenthesis Chaos" as the code grows, making it hard to read and debug.
 
 
+
 ## 🏗️ Database Schema
 The database consists of two core tables linked by a **One-to-Many relationship**:
 1. **Customers:** Stores user profiles including names, emails, and signup dates.
 2. **Orders:** Tracks transaction details, linked to the `customers` table via a `customer_id` **Foreign Key**.
+
+ 
+
 
 
 ## 📊 Business Intelligence & Analysis
@@ -32,10 +40,13 @@ In this phase, I transitioned from data management to Actionable Insights, using
 **Technique:** INNER JOIN combined with `SUM()` and `COUNT()` aggregations.
 **Insight:** By joining customers and orders, I generated a ranked list of top-tier spenders, allowing for targeted loyalty rewards.
 
+
 ### 2. Retention Analysis (Inactive Users)
 **Objective:** Identify users who signed up but have not yet made a purchase.
 **Technique:** LEFT JOIN filtered by WHERE `o.order_id` IS `NULL`.
 **Insight:** Extracted the emails of `Ghost Customers.` This data is essential for marketing teams to trigger re-engagement campaigns or provide first-purchase incentives.
+
+
 
 
 ## 🖼️ Database Abstraction (SQL Views)
@@ -47,12 +58,15 @@ To improve code reusability and simplify complex reporting, I implemented SQL Vi
 
 
 
+
+
 ## 🎯 Advanced Logic: Subqueries
 To handle multi-step data retrieval, I implemented Subqueries (Nested Queries). This allows the database to perform dynamic calculations on the fly before returning the final result.
 
 **Scalar Subqueries:** Used to compare individual records against aggregate values `(e.g., finding customers who spent more than the average)`.
 **Multi-row Subqueries:** Used with the `IN` operator to filter data across related tables without complex join overhead.
 **Logic Nesting:** Demonstrated the ability to nest queries three layers deep to bridge the gap between `Max Values` and `Customer Profiles.`
+
 
 
 
@@ -69,6 +83,7 @@ I moved from using Subqueries to CTEs. While subqueries are useful for quick cal
 🔺Using the `WITH` clause to create temporary result sets.
 🔺Chaining multiple `CTEs` together to perform `"Double Aggregation" (e.g., finding the average of a count)`.
 🔺Using `CROSS JOIN` to apply a single benchmark value to every row in a table.
+
 
 
 
@@ -91,20 +106,14 @@ I moved beyond "collapsing" data with GROUP BY and learned how to use Window Fun
 
 
 
-## 🚀 Key Features Implemented
 
-* **Relational Mapping:** Established `Primary Key` and `Foreign Key ` constraints to maintain strict data relationships.
 
-* **Complex Joins:** Implemented both `INNER JOIN` and `LEFT JOIN` to analyze different segments of the customer base.
-
-* **Data Aggregation:** Utilized GROUP BY, `SUM()`, and `COUNT()` to transform raw transactional rows into business metrics.
-
-* **Data Seeding:** Populated the database with a mix of `Active` and `Inactive` users to test real-world analytical scenarios.
 
 ## 📈 Future Roadmap
 - [X] Implement **Advanced JOINs** to identify top-spending customers.
 - [ ] Apply **Window Functions** for monthly sales trend analysis.
 - [ ] Connect the SQL backend to a **Python/Pandas** environment for deeper visualization.
+
 
 ---
 **Contact:** [Muzamil Mushtaq](https://www.linkedin.com/in/muzamilnaik/) 
