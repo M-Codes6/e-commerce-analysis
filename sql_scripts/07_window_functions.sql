@@ -39,7 +39,6 @@ FROM products;
 --- TOP 2 Filter ( Advanced Logic)
 
          --- step1 ( The Ladder ) create a CTE that calculates the rank
-         --- Step 2 (The Filter): Use that rank in a WHERE clause.
          
 WITH product_leaderboard AS(
 
@@ -49,6 +48,7 @@ FROM products
 
 )
 
+        --- Step 2 (The Filter): Use that rank in a WHERE clause.
          
 SELECT * FROM product_leaderboard   
 WHERE p_rank <= 2;
