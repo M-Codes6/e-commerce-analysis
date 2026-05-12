@@ -41,4 +41,5 @@ INSERT INTO products (product_name, category_id, price) VALUES
 ('Webcam 4K', 2, 150.00),
 ('Smartphone X', 3, 999.00),
 ('Smartphone SE', 3, 450.00),
-('Redmi note 9', 4, 200.00);
+('Redmi note 9', 4, 200.00),
+('Lenovo Laptop s14', 5, 500.00);
