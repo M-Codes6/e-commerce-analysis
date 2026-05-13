@@ -43,3 +43,4 @@ INSERT INTO products (product_name, category_id, price) VALUES
 ('Smartphone SE', 3, 450.00),
 ('Redmi note 9', 4, 200.00),
 ('Lenovo Laptop s14', 5, 500.00);
+('HP Laptop', 5, 400.00);
