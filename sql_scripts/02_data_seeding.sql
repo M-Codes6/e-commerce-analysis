@@ -1,7 +1,7 @@
 
 
 
-INSERT INTO categories (id, category_name) VALUES
+INSERT INTO categories (category_id, category_name) VALUES
 (1, 'Laptops'),
 (2, 'Accessories'),
 (3, 'Smartphones'),
@@ -68,46 +68,6 @@ INSERT INTO customers (first_name, last_name, email, signup_date) VALUES
 ('Kabir',    'Das',     'kabir.d@example.com',    '2026-04-12'),
 ('Riya',     'Shah',    'riya.sh@example.com',    '2026-04-13');
 
-
-
-
-
-INSERT INTO products (product_name, category_id, price) VALUES
--- Original records (fixed)
-('Pro Laptop',           1,  1200.00),
-('Budget Laptop',        1,   600.00),
-('Gaming PC',            1,  2500.00),
-('Wireless Mouse',       2,    25.00),
-('Mechanical Keyboard',  2,   120.00),
-('Webcam 4K',            2,   150.00),
-('Smartphone X',         3,   999.00),
-('Smartphone SE',        3,   450.00),
-('Redmi Note 9',         4,   200.00),
-('Lenovo Laptop S14',    5,   500.00),
-('HP Laptop',            5,   400.00),
- 
--- New records (12–30)
-('iPad Pro 12.9"',       6,  1100.00),
-('Samsung Tab S9',       6,   850.00),
-('Kindle Paperwhite',    6,   150.00),
-('Dell 27" Monitor',     7,   350.00),
-('LG UltraWide 34"',     7,   600.00),
-('Samsung 24" FHD',      7,   200.00),
-('Sony WH-1000XM5',      8,   350.00),
-('JBL Flip 6',           8,    90.00),
-('boAt Airdopes 141',    8,    25.00),
-('AirPods Pro 2',        8,   250.00),
-('SSD 1TB Samsung',      9,   110.00),
-('WD 2TB HDD',           9,    65.00),
-('SanDisk 256GB USB',    9,    20.00),
-('TP-Link WiFi 6 Router',10,   120.00),
-('Netgear Nighthawk',    10,  200.00),
-('Raspberry Pi 5',       2,    80.00),
-('USB-C Hub 7-in-1',     2,    35.00),
-('Logitech MX Master 3', 2,    90.00),
-('Asus ROG Laptop',      1,  2200.00),
-('MacBook Air M3',       1,  1500.00);
- 
 
 
 
@@ -180,5 +140,49 @@ INSERT INTO orders (customer_id, order_date, total_amount) VALUES
 (22, '2026-04-18',  1100.00),
 (14, '2026-04-19',   999.00),
 (15, '2026-04-19',   500.00);
+
+
+
+
+
+
+
+INSERT INTO products (product_name, category_id, price) VALUES
+-- Original records (fixed)
+('Pro Laptop',           1,  1200.00),
+('Budget Laptop',        1,   600.00),
+('Gaming PC',            1,  2500.00),
+('Wireless Mouse',       2,    25.00),
+('Mechanical Keyboard',  2,   120.00),
+('Webcam 4K',            2,   150.00),
+('Smartphone X',         3,   999.00),
+('Smartphone SE',        3,   450.00),
+('Redmi Note 9',         4,   200.00),
+('Lenovo Laptop S14',    5,   500.00),
+('HP Laptop',            5,   400.00),
+ 
+-- New records (12–30)
+('iPad Pro 12.9"',       6,  1100.00),
+('Samsung Tab S9',       6,   850.00),
+('Kindle Paperwhite',    6,   150.00),
+('Dell 27" Monitor',     7,   350.00),
+('LG UltraWide 34"',     7,   600.00),
+('Samsung 24" FHD',      7,   200.00),
+('Sony WH-1000XM5',      8,   350.00),
+('JBL Flip 6',           8,    90.00),
+('boAt Airdopes 141',    8,    25.00),
+('AirPods Pro 2',        8,   250.00),
+('SSD 1TB Samsung',      9,   110.00),
+('WD 2TB HDD',           9,    65.00),
+('SanDisk 256GB USB',    9,    20.00),
+('TP-Link WiFi 6 Router',10,   120.00),
+('Netgear Nighthawk',    10,  200.00),
+('Raspberry Pi 5',       2,    80.00),
+('USB-C Hub 7-in-1',     2,    35.00),
+('Logitech MX Master 3', 2,    90.00),
+('Asus ROG Laptop',      1,  2200.00),
+('MacBook Air M3',       1,  1500.00);
+ 
+
 
 

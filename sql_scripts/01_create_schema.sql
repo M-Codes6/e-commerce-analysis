@@ -1,35 +1,26 @@
-CREATE DATABASE ecommerce_db;
+CREATE DATABASE IF NOT EXISTS ecommerce_db;
 USE ecommerce_db;
-
 
 CREATE TABLE categories (
     category_id   INT PRIMARY KEY AUTO_INCREMENT,
     category_name VARCHAR(100) NOT NULL
 );
 
-
-
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name  VARCHAR(60)  NOT NULL,
     last_name   VARCHAR(60)  NOT NULL,
     email       VARCHAR(100) NOT NULL UNIQUE,
-    signup_data DATE         NOT NULL       
+    signup_date DATE         NOT NULL 
 );
-
-
-
 
 CREATE TABLE orders (
     order_id     INT PRIMARY KEY AUTO_INCREMENT,
     customer_id  INT            NOT NULL,
-    order_data   DATE           NOT NULL,   
+    order_date   DATE           NOT NULL, 
     total_amount DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
-
-
-
 
 CREATE TABLE products (
     product_id   INT PRIMARY KEY AUTO_INCREMENT,
@@ -38,8 +29,6 @@ CREATE TABLE products (
     price        DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (category_id) REFERENCES categories(category_id)
 );
-
-
 
 CREATE TABLE order_items (
     item_id    INT PRIMARY KEY AUTO_INCREMENT,
