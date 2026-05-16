@@ -181,6 +181,7 @@ INSERT INTO products (product_name, category_id, price) VALUES
 ('USB-C Hub 7-in-1',     2,    35.00),
 ('Logitech MX Master 3', 2,    90.00),
 ('Asus ROG Laptop',      1,  2200.00),
+('Acer Laptop',      1,  2200.00),
 ('MacBook Air M3',       1,  1500.00);
  
 
