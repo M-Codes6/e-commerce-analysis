@@ -30,3 +30,22 @@ ALTER TABLE orders
 ADD COLUMN status VARCHAR(20) DEFAULT 'Peding';
 
 SELECT * FROM orders ;
+
+
+ALTER TABLE customers 
+ADD CONSTRAINT check_name_not_blank CHECK(first_name != '');
+
+
+SELECT * FROM customers ;
+
+
+ALTER TABLE orders 
+ADD COLUMN quantity INT
+CONSTRAINT check_quantity CHECK (quantity > 0);
+
+SELECT * FROM orders ;
+
+ALTER TABLE customers
+ADD COLUMN account_status VARCHAR(20) DEFAULT 'ACTIVE';
+
+
