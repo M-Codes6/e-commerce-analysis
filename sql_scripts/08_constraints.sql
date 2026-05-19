@@ -25,12 +25,15 @@ VALUES (1, 99.99);
 SELECT * FROM orders WHERE total_amount = 99.99;
 
 
+-- Adding a Default Constraint
 
 ALTER TABLE orders 
 ADD COLUMN status VARCHAR(20) DEFAULT 'Peding';
 
 SELECT * FROM orders ;
 
+
+-- Adding a Check constraint
 
 ALTER TABLE customers 
 ADD CONSTRAINT check_name_not_blank CHECK(first_name != '');
