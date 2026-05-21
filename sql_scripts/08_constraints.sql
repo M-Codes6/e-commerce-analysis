@@ -49,6 +49,8 @@ CONSTRAINT check_quantity CHECK (quantity > 0);
 SELECT * FROM orders ;
 
 
+-- Added a Default constraint
+
 ALTER TABLE customers
 ADD COLUMN account_status VARCHAR(20) DEFAULT 'ACTIVE';
 
