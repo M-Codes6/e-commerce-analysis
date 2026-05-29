@@ -66,7 +66,11 @@ INSERT INTO customers (first_name, last_name, email, signup_date) VALUES
 ('Deepak',   'Chauhan', 'deepak.c@example.com',   '2026-04-10'),
 ('Hina',     'Farooqi', 'hina.f@example.com',     '2026-04-11'),
 ('Kabir',    'Das',     'kabir.d@example.com',    '2026-04-12'),
-('Riya',     'Shah',    'riya.sh@example.com',    '2026-04-13');
+('John',     'Siddiqui','zara.s@example.com',     '2026-04-09'),
+('Jonny',   'Chauhan', 'deepak.c@example.com',   '2026-04-10'),
+('Heera',     'Farooqi', 'hina.f@example.com',     '2026-04-11'),
+('Shadow',    'Das',     'kabir.d@example.com',    '2026-04-12'),
+('Kaliyaan',     'Shah',    'riya.sh@example.com',    '2026-04-13');
 
 
 
