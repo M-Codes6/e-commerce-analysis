@@ -75,7 +75,6 @@ INSERT INTO customers (first_name, last_name, email, signup_date) VALUES
 
 
 
-
 INSERT INTO orders (customer_id, order_date, total_amount) VALUES
 -- Original records
 (1,  '2026-01-16',  1500.00),
