@@ -145,7 +145,6 @@ INSERT INTO orders (customer_id, order_date, total_amount) VALUES
 
 
 
-
 INSERT INTO products (product_name, category_id, price) VALUES
 -- Original records (fixed)
 ('Pro Laptop',           1,  1200.00),
