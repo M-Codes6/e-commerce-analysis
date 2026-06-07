@@ -160,6 +160,8 @@ INSERT INTO products (product_name, category_id, price) VALUES
 ('HP Laptop',            5,   400.00),
  
  
+
+ 
 -- New records (12–30)
 ('iPad Pro 12.9"',       6,  1100.00),
 ('Samsung Tab S9',       6,   850.00),
