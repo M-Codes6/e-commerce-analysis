@@ -186,5 +186,3 @@ INSERT INTO products (product_name, category_id, price) VALUES
 ('MacBook Air M3',       1,  1500.00);
  
 
-
-
